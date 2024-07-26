@@ -17,20 +17,20 @@ public class Main {
 
         Employee ali = new Employee(1, "Ali Can", "ali@workintech.com", "password123", new String[1] );
         Employee veli = new Employee(2, "Veli", "veli@workintech.com", "password456", new String[1] );
-        Employee can = new Employee(2, "Can", "can@workintech.com", "password789", new String[1] );
-        Employee snoop = new Employee(2, "Snoop", "snoop@workintech.com", "password001", new String[1] );
+        Employee can = new Employee(3, "Can", "can@workintech.com", "password789", new String[1] );
+        Employee snoop = new Employee(4, "Snoop", "snoop@workintech.com", "password001", new String[1] );
 
                 workintech.addEmployee(0, ali.getFullName());
                 ali.addHealthPlan(0, basicPlan.getName());
 
 
-                workintech.addEmployee(0, veli.getFullName());
+                workintech.addEmployee(1, veli.getFullName());
                 veli.addHealthPlan(0, ultraPlan.getName());
 
-                workintech.addEmployee(0, can.getFullName());
+                workintech.addEmployee(2, can.getFullName());
                 can.addHealthPlan(0, basicPlan.getName());
 
-                workintech.addEmployee(0, snoop.getFullName());
+                workintech.addEmployee(3, snoop.getFullName());
                 snoop.addHealthPlan(0, midPlan.getName());
 
 
