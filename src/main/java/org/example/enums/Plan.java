@@ -3,7 +3,9 @@ package org.example.enums;
 public enum Plan {
     // plan(enum) : variable name & price.  BASIC zorunlu plan. org.example altında " enums " paketi oluştur.
 
-    BASIC("Basic Plan", 300);
+    BASIC("Basic Plan", 300),
+    MID("Mid Plan", 800),
+    ULTRA("Ultra Plan", 1200);
 
     String name;
     int price;

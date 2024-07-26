@@ -4,33 +4,47 @@ import org.example.enums.Plan;
 
 public class Main {
     public static void main(String[] args) {
-        // Company oluşturma (5 geliştirici kapasitesi ile)
+        // Company
+
         Company workintech = new Company(1, "Workintech", 1000000.0, new String[5]);
 
-        // Employee'ler oluşturma
-        Employee ali = new Employee(1, "Ali Can", "ali@workintech.com", "password123", new String[1]);
-        Employee ayse = new Employee(2, "Ayşe Yılmaz", "ayse@workintech.com", "password456", new String[1]);
+        // Healthplan'lar Employee'ler
 
-        // Company'e Employee ekleme
-        System.out.println(workintech.addEmployee(0, ali.getFullName()));
-        System.out.println(workintech.addEmployee(1, ayse.getFullName()));
-
-        // Healthplan oluşturma
         Healthplan basicPlan = new Healthplan(1, "Temel Sağlık Planı", Plan.BASIC);
+        Healthplan midPlan = new Healthplan(2, "Orta Sağlık Planı", Plan.MID);
+        Healthplan ultraPlan = new Healthplan(3, "Ultra Sağlık Planı", Plan.ULTRA);
 
-        // Employee'lere Healthplan ekleme
-        System.out.println(ali.addHealthPlan(0, basicPlan.getName()));
-        System.out.println(ayse.addHealthPlan(0, basicPlan.getName()));
 
-        // Sonuçları yazdırma
+        Employee ali = new Employee(1, "Ali Can", "ali@workintech.com", "password123", new String[1] );
+        Employee veli = new Employee(2, "Veli", "veli@workintech.com", "password456", new String[1] );
+        Employee can = new Employee(2, "Can", "can@workintech.com", "password789", new String[1] );
+        Employee snoop = new Employee(2, "Snoop", "snoop@workintech.com", "password001", new String[1] );
+
+                workintech.addEmployee(0, ali.getFullName());
+                ali.addHealthPlan(0, basicPlan.getName());
+
+
+                workintech.addEmployee(0, veli.getFullName());
+                veli.addHealthPlan(0, ultraPlan.getName());
+
+                workintech.addEmployee(0, can.getFullName());
+                can.addHealthPlan(0, basicPlan.getName());
+
+                workintech.addEmployee(0, snoop.getFullName());
+                snoop.addHealthPlan(0, midPlan.getName());
+
+
+        // Sonuçlar
         System.out.println("\nŞirket Bilgileri:");
         System.out.println(workintech);
 
         System.out.println("\nÇalışan Bilgileri:");
         System.out.println(ali);
-        System.out.println(ayse);
+        System.out.println(veli);
+        System.out.println(can);
+        System.out.println(snoop);
 
-        System.out.println("\nSağlık Planı Bilgileri:");
-        System.out.println(basicPlan);
+
+
     }
 }
